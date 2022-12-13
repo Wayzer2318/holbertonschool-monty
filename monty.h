@@ -34,6 +34,6 @@ typedef struct instruction_s
 char *opcode;
 void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-char **tokenizer(char *lineptr);
+char **tokenize(char *lineptr);
 void _push(stack_t **stack, unsigned int num);
 #endif
