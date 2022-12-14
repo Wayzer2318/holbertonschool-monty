@@ -26,7 +26,7 @@ void handle_command(char *argv)
 			else if (*arguments == '#')
 				continue;
 			item = strtok(NULL, " \n\t\r");
-			result = get_opc(&stack, arguments, item, count);
+			result = _get_opc(&stack, arguments, item, count);
 			if (result == 1)
 				push_error(global.fd, global.line, stack, count);
 			else if (result == 2)
