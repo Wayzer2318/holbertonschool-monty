@@ -1,6 +1,6 @@
 #include"monty.h"
 /**
- * get_opc - function to handle the opcode
+ * _get_opc - function to handle the opcode
  * @stack: is a stack or queue
  * @arg: is a parameter
  * @item: is a parameter
@@ -8,7 +8,7 @@
  * Return: nothing
  */
 
-int get_opc(stack_t **stack, char *arg, char *item, int count)
+int _get_opc(stack_t **stack, char *arg, char *item, int count)
 {
 	int i = 0;
 
