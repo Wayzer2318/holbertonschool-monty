@@ -54,3 +54,6 @@ typedef struct glob_s
 } glob_t;
 extern glob_t global;
 extern int value;
+
+void _push(stack_t **stack, unsigned int line_number);
+
