@@ -52,8 +52,30 @@ typedef struct glob_s
 	FILE *fd;
 	char *line;
 } glob_t;
+
 extern glob_t global;
 extern int value;
 
-void _push(stack_t **stack, unsigned int line_number);
+void handle_command(char *argv);
 
+int _get_opc(stack_t **stack, char *arg, char *item, int count);
+
+void _push(stack_t **stack, unsigned int line_number);
+void _pall(stack_t **stack, unsigned int line_number);
+void _pint(stack_t **stack, unsigned int line_number);
+void _swap(stack_t **stack, unsigned int line_number);
+void _pop(stack_t **stack, unsigned int line_number);
+void _add(stack_t **stack, unsigned int line_number);
+void _nop(stack_t **stack, unsigned int line_number);
+void cleanStack(stack_t **stack);
+void free_dlistint(stack_t *stack);
+
+/*Help*/
+int _isdigit(char *c);
+stack_t *new_Node(int n);
+
+/* handle_errors */
+void push_error(FILE *fd, char *line, stack_t *stack, int count);
+void ins_error(FILE *fd, char *line, stack_t *stack, char *count, int item);
+
+#endif
